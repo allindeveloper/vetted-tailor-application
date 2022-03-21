@@ -2,5 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    color: ${(props) => props.theme.pallete.common.rootBackgroundColor};
+    background-color: ${(props) =>
+      props.theme.pallete.common.rootBackgroundColor};
   }`;

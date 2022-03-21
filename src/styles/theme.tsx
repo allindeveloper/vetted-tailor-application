@@ -12,7 +12,7 @@ const myTheme: DefaultTheme = {
     primary: {
       main: "#B7076B",
       lightmain: "#F9F9F9",
-      black: "#000000",
+      black: "#212135",
     },
   },
 };

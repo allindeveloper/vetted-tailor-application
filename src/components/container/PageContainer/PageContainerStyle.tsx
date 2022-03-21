@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { appPadding } from "../../../constants/appConstants";
 import { device } from "../../../styles/mediaQuery";
 
 export const PageContainerStyle = styled.div`
@@ -11,7 +12,7 @@ export const PageContainerStyle = styled.div`
     margin: 0 auto;
   }
   @media ${device.mobileS} {
-    margin: 10px;
+    margin: ${appPadding};
   }
 
   margin: 0 auto;
