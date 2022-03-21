@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { myTheme } from "styles/theme";
+import { MainContainer } from "./components/container/MainContainer";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
@@ -10,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
-        <div>Hello world</div>
+        <MainContainer />
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
