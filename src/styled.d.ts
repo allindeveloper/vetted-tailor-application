@@ -7,6 +7,8 @@ declare module "styled-components" {
       common: {
         white: string;
         gray: string;
+        grey: string;
+        rootBackgroundColor: string;
         lightborder: string;
       };
       primary: IPalette;

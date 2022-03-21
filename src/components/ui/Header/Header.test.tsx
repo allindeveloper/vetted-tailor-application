@@ -5,15 +5,13 @@ import { Header } from "./Header";
 
 describe("Header Component", () => {
   it("Header renders with correct title", () => {
-    const { getByText } = render(<Header />);
-    expect(
-      getByText(`"The New York Times" article search application`),
-    ).toBeInTheDocument();
+    const { getByText } = render(<Header title={"Profile"} />);
+    expect(getByText(`Profile`)).toBeInTheDocument();
   });
 
   it("Header should be black", () => {
-    const color = "#18191F";
-    const { element } = setup(<Header />, "header");
+    const color = "#FFFFFF";
+    const { element } = setup(<Header title={"Profile"} />, "header");
     expect(element).toHaveStyle(`background: ${color}`);
   });
 });

@@ -6,7 +6,7 @@ export const routes = [
   {
     path: "/",
     exact: true,
-    name: "Dashboard",
+    name: "Profile",
     component: Profile,
   },
   {

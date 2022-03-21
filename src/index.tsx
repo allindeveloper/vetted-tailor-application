@@ -6,11 +6,13 @@ import { myTheme } from "styles/theme";
 import { MainContainer } from "./components/container/MainContainer";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { GlobalStyle } from "./styles/globalStyle";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
+        <GlobalStyle />
         <MainContainer />
       </ThemeProvider>
     </BrowserRouter>

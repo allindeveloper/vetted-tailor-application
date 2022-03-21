@@ -3,23 +3,32 @@ import { device } from "styles/mediaQuery";
 import { myTheme } from "../../../styles/theme";
 
 export const HeaderStyle = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-align: center;
-  background-color: ${(props) => props.theme.pallete.primary.main};
-  p {
-    font-weight: 600;
-    color: ${(props) => props.theme.pallete.common.white};
-  }
-  color: #fff;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
-  letter-spacing: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: ${(props) => `1px solid ${props.theme.pallete.common.grey}`};
+  background-color: ${(props) => props.theme.pallete.common.white};
   @media ${device.mobileS} {
-    width: 100%;
+    width: -webkit-fill-available;
+  }
+  & .leftItem {
+    margin-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  & .rightItem {
+    margin-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 `;
 

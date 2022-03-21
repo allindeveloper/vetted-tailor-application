@@ -9,7 +9,7 @@ interface IContainerProps {
 const PageContainer = ({ children }: IContainerProps) => {
   return (
     <>
-      <Header />
+      <Header title="Profile" />
       <PageContainerStyle>{children}</PageContainerStyle>;
     </>
   );

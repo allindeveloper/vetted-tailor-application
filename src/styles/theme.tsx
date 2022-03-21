@@ -5,6 +5,8 @@ const myTheme: DefaultTheme = {
     common: {
       white: "#FFFFFF",
       gray: "#4F4F4F",
+      grey: "#DDDDDD",
+      rootBackgroundColor: "#F9F9F9",
       lightborder: "#D6DDFF",
     },
     primary: {
