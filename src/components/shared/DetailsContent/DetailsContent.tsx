@@ -1,9 +1,13 @@
 import emailicon from "assets/svg/emailicon.svg";
 import phoneicon from "assets/svg/phoneicon.svg";
 import React from "react";
+import { Button } from "../../ui/Button/Button";
 import { DetailsContentStyle } from "./DetailsContentStyle";
 
-const DetailsContent = () => {
+export interface IDetailsContentProps {
+  handleApply: () => void;
+}
+const DetailsContent = ({ handleApply }: IDetailsContentProps) => {
   return (
     <DetailsContentStyle>
       <div className="top-details">
@@ -49,6 +53,14 @@ const DetailsContent = () => {
         <div>
           <p className="bottom-value">samuelolaleye@gmail.com</p>
         </div>
+      </div>
+
+      <div>
+        <Button
+          onClick={handleApply}
+          title="Apply to be a Vetter Tailor"
+          id={"tailorapply"}
+        />
       </div>
     </DetailsContentStyle>
   );
