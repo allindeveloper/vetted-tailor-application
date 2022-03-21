@@ -1,20 +1,32 @@
 import backicon from "assets/svg/backicon.svg";
 import hamburgericon from "assets/svg/hamburgericon.svg";
+import { useNavigate } from "react-router-dom";
 import { HeaderStyle } from "./HeaderStyle";
 
 export interface IHeaderProps {
   title: string;
+  handleGoBack?: () => void;
+  handleClickHamburger?: () => void;
 }
-export const Header = ({ title }: IHeaderProps) => {
+export const Header = ({
+  title,
+  handleGoBack,
+  handleClickHamburger,
+}: IHeaderProps) => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <HeaderStyle data-testid="header">
-      <div className="leftItem">
+      <div onClick={handleGoBack ? handleGoBack : goBack} className="leftItem">
         <img src={backicon} alt="back" />
       </div>
       <div>
         <label>{title}</label>
       </div>
-      <div className="rightItem">
+      <div onClick={handleClickHamburger} className="rightItem">
         <img src={hamburgericon} alt="hamburger" />
       </div>
     </HeaderStyle>

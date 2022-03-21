@@ -1,22 +1,20 @@
+import { routes } from "constants/routes";
 import React, { FC } from "react";
-import { Switch } from "react-router-dom";
-import { routes } from "../../constants/routes";
-import GuardRoute from "./Guard";
+import { Route, Routes } from "react-router-dom";
 export const MainContainer: FC = () => {
-  const allRoutes = routes.map((route, index: number) => {
-    const Component = route.component as React.ComponentType;
-    return Component ? (
-      <GuardRoute
-        key={index}
-        path={route.path}
-        exact={route.exact}
-        component={route.component}
-      />
-    ) : null;
-  });
   return (
     <>
-      <Switch>{allRoutes}</Switch>
+      <Routes>
+        {routes.map((route, index) => {
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={<route.component />}
+            />
+          );
+        })}
+      </Routes>
     </>
   );
 };

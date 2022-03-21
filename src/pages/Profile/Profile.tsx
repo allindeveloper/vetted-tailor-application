@@ -1,5 +1,6 @@
 import PageContainer from "components/container/PageContainer/PageContainer";
 import React, { useState } from "react";
+import DetailsContent from "../../components/shared/DetailsContent/DetailsContent";
 import { Card } from "../../components/ui/Card/Card";
 import { Space } from "../../components/ui/Space/Space";
 import { Tabs } from "../../components/ui/Tabs/Tabs";
@@ -14,8 +15,11 @@ const Profile = () => {
     setselected("right");
   };
   return (
-    <PageContainer>
-      <Card title={"Vetter Tailor Application"} />
+    <PageContainer title="Profile">
+      <Card
+        title={"Vetter Tailor Application"}
+        customTopContent={<DetailsContent />}
+      />
       <Space top={20} />
       <Card
         showImage={false}
