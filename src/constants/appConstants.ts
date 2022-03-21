@@ -3,4 +3,4 @@ export const api = {
   BANKS: "banks",
 };
 
-export const appPadding = "15px";
+export const appPadding = "20px";

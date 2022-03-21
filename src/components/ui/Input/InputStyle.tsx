@@ -16,7 +16,7 @@ export const InputStyle = styled.div`
     img {
       position: absolute;
       left: 15px;
-      top: 8px;
+      top: -4px;
       cursor: pointer;
       width: 3.5%;
       @media ${device.mobileS} {
@@ -28,13 +28,13 @@ export const InputStyle = styled.div`
     box-sizing: content-box;
     outline: none;
     width: -webkit-fill-available;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: ${(props) => `1px solid${props.theme.pallete.common.greyFour}`};
+    padding-top: 12.83px;
+    padding-bottom: 12.5px;
+    padding-left: 37px;
+    padding-right: 22px;
+    border: ${(props) => `0.7px solid${props.theme.pallete.common.greyFour}`};
 
-    border-radius: 2px;
+    border-radius: 7px;
     font-size: 15px;
     &:focus {
       border-color: none;

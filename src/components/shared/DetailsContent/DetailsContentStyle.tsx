@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { myTheme } from "styles/theme";
 
 export const DetailsContentStyle = styled.div`
+  & .lastDiv {
+    margin-top: 20px;
+    text-align: center;
+  }
   & .top-details {
     margin-left: 12%;
     & .name {

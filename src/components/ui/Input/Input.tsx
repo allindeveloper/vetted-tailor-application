@@ -1,4 +1,3 @@
-import search from "assets/svg/search.svg";
 import { InputStyle } from "./InputStyle";
 export interface ICustomInputProps {
   name: string;
@@ -6,11 +5,13 @@ export interface ICustomInputProps {
   id: string;
   placeholder?: string;
   value?: string;
+  startIcon?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export const CustomInput = ({
   onChange,
   name,
+  startIcon,
   id,
   placeholder = "Search",
   labelText,
@@ -21,6 +22,7 @@ export const CustomInput = ({
         <label htmlFor={name}>{labelText}</label>
       </p>
       <div>
+        <img alt="search" title="Search" src={startIcon} />
         <input
           type="text"
           onChange={(e) => onChange?.(e)}
@@ -30,7 +32,6 @@ export const CustomInput = ({
           data-testid={"searchInput"}
           aria-label="search-input"
         />
-        <img alt="search" title="Search" src={search} />
       </div>
     </InputStyle>
   );

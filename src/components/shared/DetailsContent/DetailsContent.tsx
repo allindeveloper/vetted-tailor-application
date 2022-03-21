@@ -55,10 +55,10 @@ const DetailsContent = ({ handleApply }: IDetailsContentProps) => {
         </div>
       </div>
 
-      <div>
+      <div className="lastDiv">
         <Button
           onClick={handleApply}
-          title="Apply to be a Vetter Tailor"
+          title="Apply to be a Vetted Tailor"
           id={"tailorapply"}
         />
       </div>

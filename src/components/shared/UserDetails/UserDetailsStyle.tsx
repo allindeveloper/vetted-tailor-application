@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { myTheme } from "styles/theme";
-import { appPadding } from "../../../constants/appConstants";
 
 export const UserDetailsStyle = styled.div`
   & .content {
-    margin-left: ${appPadding};
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
