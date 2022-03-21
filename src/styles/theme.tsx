@@ -7,9 +7,11 @@ const myTheme: DefaultTheme = {
       gray: "#4F4F4F",
       grayOne: "#333333",
       greyThree: "#828282",
+      greyFour: "#BDBDBD",
       grey: "#DDDDDD",
       rootBackgroundColor: "#F9F9F9",
       lightborder: "#D6DDFF",
+      inputLabel: "#5E5E5E",
     },
     primary: {
       main: "#B7076B",

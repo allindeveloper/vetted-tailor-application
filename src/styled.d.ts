@@ -10,8 +10,10 @@ declare module "styled-components" {
         grayOne: string;
         greyThree: string;
         grey: string;
+        greyFour: string;
         rootBackgroundColor: string;
         lightborder: string;
+        inputLabel: string;
       };
       primary: IPalette;
     };
