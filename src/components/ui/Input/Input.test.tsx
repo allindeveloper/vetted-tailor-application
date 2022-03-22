@@ -1,16 +1,17 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { CustomInput } from "./Input";
 
+const mockedUsedNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedUsedNavigate,
+}));
 describe("Input Component", () => {
   test("render text input", () => {
-    render(<CustomInput name={"searchInput"} id={"search"} />);
+    render(<CustomInput name={"searchInput"} type="number" id={"search"} />);
     const inputEl = screen.getByTestId("searchInput");
 
-    userEvent.type(inputEl, "Access Bank");
-    expect(screen.getByTestId("searchInput")).toHaveValue("Access Bank");
-
-    expect(inputEl).toHaveAttribute("type", "text");
+    expect(inputEl).toHaveAttribute("type", "number");
   });
 
   test("Changing text input value", () => {

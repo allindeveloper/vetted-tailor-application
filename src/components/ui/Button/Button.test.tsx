@@ -1,6 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { Button } from "./Button";
 
+const mockedUsedNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedUsedNavigate,
+}));
 describe("Button Component", () => {
   test("render button", () => {
     render(
