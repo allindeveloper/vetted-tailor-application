@@ -6,8 +6,8 @@ export const InputStyle = styled.div`
   width: 100%;
   position: relative;
   label {
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 14px;
     color: ${(props) => props.theme.pallete.common.inputLabel};
   }
   div {

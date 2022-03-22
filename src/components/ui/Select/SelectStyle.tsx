@@ -3,6 +3,11 @@ import { myTheme } from "styles/theme";
 
 export const SelectStyle = styled.div`
   
+label {
+  font-weight: 400;
+  font-size: 14px;
+  color: ${(props) => props.theme.pallete.common.inputLabel};
+}
 & .select-box {
   position: relative;
   display: block;

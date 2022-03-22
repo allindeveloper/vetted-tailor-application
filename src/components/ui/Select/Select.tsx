@@ -1,65 +1,45 @@
+import { IBank } from "../../../types/banks";
 import { SelectStyle } from "./SelectStyle";
 
-export const Select = () => {
+export interface SelectProps {
+  items: IBank[];
+  labelText: string;
+  onClick?: (item: IBank) => void;
+  selectedBank?: IBank;
+}
+export const Select = ({
+  selectedBank,
+  items,
+  labelText,
+  onClick,
+}: SelectProps) => {
   return (
     <SelectStyle>
+      <p>
+        <label>{labelText}</label>
+      </p>
+
       <div className="select-box">
         <div className="select-box__current" tabIndex={1}>
-          <div className="select-box__value">
-            <input
-              className="select-box__input"
-              type="radio"
-              id="0"
-              value="1"
-              name="Ben"
-              checked
-            />
-            <p className="select-box__input-text">Cream</p>
-          </div>
-          <div className="select-box__value">
-            <input
-              className="select-box__input"
-              type="radio"
-              id="1"
-              value="2"
-              name="Ben"
-              checked
-            />
-            <p className="select-box__input-text">Cheese</p>
-          </div>
-          <div className="select-box__value">
-            <input
-              className="select-box__input"
-              type="radio"
-              id="2"
-              value="3"
-              name="Ben"
-              checked
-            />
-            <p className="select-box__input-text">Milk</p>
-          </div>
-          <div className="select-box__value">
-            <input
-              className="select-box__input"
-              type="radio"
-              id="3"
-              value="4"
-              name="Ben"
-              checked
-            />
-            <p className="select-box__input-text">Honey</p>
-          </div>
-          <div className="select-box__value">
-            <input
-              className="select-box__input"
-              type="radio"
-              id="4"
-              value="5"
-              name="Ben"
-              checked
-            />
-            <p className="select-box__input-text">Toast</p>
-          </div>
+          {items.map((item, index) => (
+            <div key={index} className="select-box__value">
+              <input
+                className="select-box__input"
+                type="radio"
+                id={index.toString()}
+                value={++index}
+                onClick={() => onClick?.(item)}
+                name="Ben"
+                defaultChecked
+              />
+              <p className="select-box__input-text">
+                {selectedBank && Object.keys(selectedBank).length > 0
+                  ? selectedBank.name
+                  : "Please select your bank"}
+              </p>
+            </div>
+          ))}
+
           <img
             className="select-box__icon"
             src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
@@ -68,31 +48,13 @@ export const Select = () => {
           />
         </div>
         <ul className="select-box__list">
-          <li>
-            <label className="select-box__option" htmlFor="0">
-              Cream
-            </label>
-          </li>
-          <li>
-            <label className="select-box__option" htmlFor="1">
-              Cheese
-            </label>
-          </li>
-          <li>
-            <label className="select-box__option" htmlFor="2">
-              Milk
-            </label>
-          </li>
-          <li>
-            <label className="select-box__option" htmlFor="3">
-              Honey
-            </label>
-          </li>
-          <li>
-            <label className="select-box__option" htmlFor="4">
-              Toast
-            </label>
-          </li>
+          {items.map((item, key) => (
+            <li key={key}>
+              <label className="select-box__option" htmlFor={key.toString()}>
+                {item.name}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
     </SelectStyle>
