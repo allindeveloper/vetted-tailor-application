@@ -12,7 +12,7 @@ Vetter Tailor application
 
 
 ## Api Integration
-- The application integrates with [FetchBanks](  https://fitted-staging-api.herokuapp.com/api/v1/bank.banks) to get list banks and [ResolveAccount]( https://fitted-staging-api.herokuapp.com/api/v1/bank/resolveAccount)
+- The application integrates with [FetchBanks](  https://fitted-staging-api.herokuapp.com/api/v1/bank.banks) to get list banks and [ResolveAccount]( https://fitted-staging-api.herokuapp.com/api/v1/bank/resolveAccount) to resolve account
 
 ## Setup Locally
 
