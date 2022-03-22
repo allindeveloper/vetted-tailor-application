@@ -1,10 +1,10 @@
 import successicon from "assets/svg/successicon.svg";
 import MobileWrapper from "components/container/MobileWrapper/MobileWrapper";
+import { Button } from "components/ui/Button/Button";
 import { Card } from "components/ui/Card/Card";
+import { Space } from "components/ui/Space/Space";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components/ui/Button/Button";
-import { Space } from "../../components/ui/Space/Space";
 import { SuccessStyle } from "./SuccessStyle";
 const Success = () => {
   const navigate = useNavigate();
@@ -14,7 +14,11 @@ const Success = () => {
         showImage={false}
         customContent={
           <SuccessStyle>
-            <img src={successicon} alt="success icon" />
+            <img
+              data-testid="successImage"
+              src={successicon}
+              alt="success icon"
+            />
             <p className="yay">Yay!!! 🎉</p>
             <p>
               Your application to become a vetted tailor has been sent, a Fitted
