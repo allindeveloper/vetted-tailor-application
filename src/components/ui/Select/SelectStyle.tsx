@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "styles/theme";
+import { device } from "../../../styles/mediaQuery";
 
 export const SelectStyle = styled.div`
   
@@ -18,7 +19,16 @@ label {
   border-radius: 7px;
   border: ${(props) => `0.7px solid${props.theme.pallete.common.greyFour}`};
 }
-
+& .selectstartIcon {
+  position: absolute;
+  left: 15px;
+  top: -4px;
+  cursor: pointer;
+  width: 3.5%;
+  @media ${device.mobileS} {
+    width: auto;
+  }
+}
 & .select-box__current {
   position: relative;
   cursor: pointer;
@@ -38,7 +48,7 @@ label {
 }
 & .select-box__icon {
   position: absolute;
-  top: 16%;
+  top: 19%;
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -61,7 +71,7 @@ label {
   font-size: 15px;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 37px;
+  padding-left: 38px;
   padding-right: 22px;
  }
 & .select-box__list {
@@ -93,7 +103,6 @@ label {
 }
 & .select-box__option:hover, .select-box__option:focus {
   color: #546c84;
-  background-color: #fbfbfb;
 }
 
 @-webkit-keyframes HideList {

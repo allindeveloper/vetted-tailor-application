@@ -1,6 +1,8 @@
 import backicon from "assets/svg/backicon.svg";
 import hamburgericon from "assets/svg/hamburgericon.svg";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Space } from "../Space/Space";
 import { HeaderStyle } from "./HeaderStyle";
 
 export interface IHeaderProps {
@@ -19,16 +21,22 @@ export const Header = ({
     navigate(-1);
   };
   return (
-    <HeaderStyle data-testid="header">
-      <div onClick={handleGoBack ? handleGoBack : goBack} className="leftItem">
-        <img src={backicon} alt="back" />
-      </div>
-      <div>
-        <label>{title}</label>
-      </div>
-      <div onClick={handleClickHamburger} className="rightItem">
-        <img src={hamburgericon} alt="hamburger" />
-      </div>
-    </HeaderStyle>
+    <React.Fragment>
+      <HeaderStyle data-testid="header">
+        <div
+          onClick={handleGoBack ? handleGoBack : goBack}
+          className="leftItem"
+        >
+          <img src={backicon} alt="back" />
+        </div>
+        <div className="title">
+          <label>{title}</label>
+        </div>
+        <div onClick={handleClickHamburger} className="rightItem">
+          <img src={hamburgericon} alt="hamburger" />
+        </div>
+      </HeaderStyle>
+      <Space bottom={100} />
+    </React.Fragment>
   );
 };

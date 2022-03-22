@@ -13,6 +13,8 @@ export const CardStyle = styled.div`
   & .title {
     margin-top: 20px;
     text-align: center;
+    font-weight: 700;
+    font-size: 16px;
     color: ${(props) => props.theme.pallete.primary.black};
   }
   img {

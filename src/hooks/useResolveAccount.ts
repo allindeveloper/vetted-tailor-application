@@ -1,8 +1,8 @@
 import { AxiosError, AxiosResponse } from "axios";
 import { useState } from "react";
+import AxiosInstance from "services/AxiosInstance";
 import { IListMetaData } from "types/list";
 import { IRootResponse } from "types/response";
-import AxiosInstance from "../services/AxiosInstance";
 import { formatResolveBankAccountUrl } from "../services/banks";
 import { IResolvedResponse, IResolvePayload } from "../types/banks";
 
@@ -22,6 +22,10 @@ const useResolveAccount = () => {
       .then(
         (res: AxiosResponse<{ content: IRootResponse<IResolvedResponse> }>) => {
           const resolvedData = res.data.content.data;
+          setlistMetaData({
+            isError: false,
+            isSearching: false,
+          });
           setresolvedResponse(resolvedData);
         },
       )

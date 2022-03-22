@@ -20,6 +20,11 @@ export const HeaderStyle = styled.div`
   @media ${device.mobileS} {
     width: -webkit-fill-available;
   }
+  & .title {
+    color: ${(props) => props.theme.pallete.primary.defaultBlack};
+    font-weight: 400;
+    font-size: 16px;
+  }
   & .leftItem {
     margin-left: 5px;
     padding-top: 4px;

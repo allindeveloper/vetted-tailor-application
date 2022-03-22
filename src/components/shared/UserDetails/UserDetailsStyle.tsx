@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { myTheme } from "styles/theme";
 
 export const UserDetailsStyle = styled.div`
+  margin-top: 10px;
   & .content {
     display: flex;
     justify-content: flex-start;

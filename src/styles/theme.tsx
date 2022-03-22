@@ -18,6 +18,7 @@ const myTheme: DefaultTheme = {
       lightmain: "#F9F9F9",
       heading: "#3F434A",
       black: "#212135",
+      defaultBlack: "#000000",
       error: "#f44336",
       success: "#4caf50",
       pending: "#ffc107",

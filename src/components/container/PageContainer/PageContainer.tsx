@@ -13,7 +13,7 @@ const PageContainer = ({ children, handleGoBack, title }: IContainerProps) => {
     <>
       <Header handleGoBack={handleGoBack} title={title} />
       <Space top={80} />
-      <PageContainerStyle>{children}</PageContainerStyle>;
+      <PageContainerStyle>{children}</PageContainerStyle>
     </>
   );
 };

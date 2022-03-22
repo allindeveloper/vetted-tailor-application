@@ -30,7 +30,7 @@ export const InputStyle = styled.div`
     width: -webkit-fill-available;
     padding-top: 12.83px;
     padding-bottom: 12.5px;
-    padding-left: 37px;
+    padding-left: 38px;
     padding-right: 22px;
     border: ${(props) => `0.7px solid${props.theme.pallete.common.greyFour}`};
 

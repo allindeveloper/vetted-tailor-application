@@ -24,7 +24,7 @@ export const CustomInput = ({
         <label htmlFor={name}>{labelText}</label>
       </p>
       <div>
-        <img alt="search" title="Search" src={startIcon} />
+        <img alt="startIcon" title="Search" src={startIcon} />
         <input
           type={type}
           onChange={(e) => onChange?.(e)}

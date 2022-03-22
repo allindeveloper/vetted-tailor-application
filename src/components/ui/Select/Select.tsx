@@ -6,12 +6,14 @@ export interface SelectProps {
   labelText: string;
   onClick?: (item: IBank) => void;
   selectedBank?: IBank;
+  startIcon?: string;
 }
 export const Select = ({
   selectedBank,
   items,
   labelText,
   onClick,
+  startIcon,
 }: SelectProps) => {
   return (
     <SelectStyle>
@@ -20,6 +22,12 @@ export const Select = ({
       </p>
 
       <div className="select-box">
+        <img
+          alt="startIcon"
+          title="Search"
+          className="selectstartIcon"
+          src={startIcon}
+        />
         <div className="select-box__current" tabIndex={1}>
           {items.map((item, index) => (
             <div key={index} className="select-box__value">
