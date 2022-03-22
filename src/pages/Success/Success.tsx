@@ -2,10 +2,12 @@ import successicon from "assets/svg/successicon.svg";
 import MobileWrapper from "components/container/MobileWrapper/MobileWrapper";
 import { Card } from "components/ui/Card/Card";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/Button/Button";
 import { Space } from "../../components/ui/Space/Space";
 import { SuccessStyle } from "./SuccessStyle";
 const Success = () => {
+  const navigate = useNavigate();
   return (
     <MobileWrapper title="Application Successful">
       <Card
@@ -20,7 +22,11 @@ const Success = () => {
             </p>
             <Space top={70} />
 
-            <Button title="Return to Dashboard" id={"return"} />
+            <Button
+              onClick={() => navigate("/")}
+              title="Return to Dashboard"
+              id={"return"}
+            />
           </SuccessStyle>
         }
       />

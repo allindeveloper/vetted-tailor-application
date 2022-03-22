@@ -59,8 +59,6 @@ const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
           accountNo: accountNumberKeyword,
         };
         resolveAccount(payload);
-      } else {
-        seterror("Account number must be 10 digits");
       }
     }
   }, [selectedBank]);
@@ -88,6 +86,7 @@ const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
           name={"accountNumber"}
           id={"accountNumber"}
           labelText="Account Number"
+          disabled={resolvingMetaData.isSearching}
           value={accountNumberKeyword}
           type="number"
           onChange={handleSearchInputChange}

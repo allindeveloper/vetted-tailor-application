@@ -21,7 +21,7 @@ const myTheme: DefaultTheme = {
       defaultBlack: "#000000",
       error: "#f44336",
       success: "#4caf50",
-      pending: "#ffc107",
+      pending: "#ff9800",
     },
   },
 };

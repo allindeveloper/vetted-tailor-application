@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "styles/mediaQuery";
-import { myTheme } from "../../../styles/theme";
+import { myTheme } from "styles/theme";
 
 export const HeaderStyle = styled.div`
   display: flex;
@@ -19,6 +19,9 @@ export const HeaderStyle = styled.div`
   background-color: ${(props) => props.theme.pallete.common.white};
   @media ${device.mobileS} {
     width: -webkit-fill-available;
+  }
+  @media ${device.laptop} {
+    display: none;
   }
   & .title {
     color: ${(props) => props.theme.pallete.primary.defaultBlack};

@@ -8,14 +8,21 @@ jest.mock("react-router-dom", () => ({
 }));
 describe("Input Component", () => {
   test("render text input", () => {
-    render(<CustomInput name={"searchInput"} type="number" id={"search"} />);
+    render(
+      <CustomInput
+        name={"searchInput"}
+        type="number"
+        id={"search"}
+        disabled={false}
+      />,
+    );
     const inputEl = screen.getByTestId("searchInput");
 
     expect(inputEl).toHaveAttribute("type", "number");
   });
 
   test("Changing text input value", () => {
-    render(<CustomInput name={"searchInput"} id={"search"} />);
+    render(<CustomInput name={"searchInput"} id={"search"} disabled={false} />);
     const inputEl = screen.getByTestId("searchInput");
 
     fireEvent.change(inputEl, { target: { value: "sterling" } });

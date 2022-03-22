@@ -1,23 +1,22 @@
-“The New York Times” article search application
+Vetter Tailor application
 ============================
 
 
 ## Application Features
 
-- A main screen, where a user can search for articles, and view search results.
-- A detailed article view screen.
-- Pagination: Ability to navigate between the result pages with the possibility to access the same result page by URL.
-- Ability to access each article via a different URL.
-- Return a list of NYT articles based on a given search term. A Result item should contain a title.
+- Ability to view user profile
+- Ability to view details of the user.
+- View List to of banks.
+- Resolve Account Info.
+- A screen to show a successful transaction
 
 
 ## Api Integration
-- The application integrates with [nytimes]( https://developer.nytimes.com/) to get list of articles and perform several filtering operations on the  [Article Search API](https://developer.nytimes.com/docs/articlesearch-product/1/overview)
+- The application integrates with [FetchBanks](  https://fitted-staging-api.herokuapp.com/api/v1/bank.banks) to get list banks and [ResolveAccount]( https://fitted-staging-api.herokuapp.com/api/v1/bank/resolveAccount)
 
 ## Setup Locally
 
 ### Install the Dependencies
-**_For the purpose of this task, the env has been bundled with the code, but in a real world project it would be configured via a CI/CD Pipeline._**
 
 In the project directory on a terminal, you can run:
 
@@ -33,7 +32,7 @@ In the project directory on a terminal, you can run:
 ### `npm start`
 
 This command Runs the app in the development mode.<br>
-Open [http://localhost:3020](http://localhost:3020) to view it in the browser.
+Open [http://localhost:3020](http://localhost:3044) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You might also see any lint errors in the console.

@@ -7,10 +7,12 @@ export interface ICustomInputProps {
   value?: string;
   startIcon?: string;
   type?: string;
+  disabled: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export const CustomInput = ({
   onChange,
+  disabled,
   name,
   startIcon,
   id,
@@ -30,6 +32,7 @@ export const CustomInput = ({
           onChange={(e) => onChange?.(e)}
           id={id}
           name={name}
+          disabled={disabled}
           placeholder={placeholder}
           data-testid={"searchInput"}
           aria-label="search-input"
