@@ -38,8 +38,7 @@ const useGetBanks = () => {
         if (err.response) {
           setlistMetaData({
             errorMessage:
-              err.response?.data?.fault?.faultstring ??
-              err.response?.statusText,
+              err.response?.data?.message ?? err.response?.statusText,
             isError: true,
             isSearching: false,
           });
