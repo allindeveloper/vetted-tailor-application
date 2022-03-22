@@ -63,6 +63,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ---
 
 - [React](https://reactjs.org/) - The front-end library used.
+- [Axios](https://www.npmjs.com/package/axios/) - The library used for http requests.
 - [Typesript](https://www.typescriptlang.org/) - A strongly typed programming language. superset of Javascript.
 - [Styled Components](https://styled-components.com/) - The UI  library used.
 - [create-react-app-typescript](https://create-react-app.dev/docs/adding-typescript/) - The command line utility tool for setting up React project.
