@@ -16,7 +16,7 @@ export const InputStyle = styled.div`
     img {
       position: absolute;
       left: 15px;
-      top: -4px;
+      top: 13px;
       cursor: pointer;
       width: 3.5%;
       @media ${device.mobileS} {

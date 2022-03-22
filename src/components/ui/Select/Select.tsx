@@ -1,4 +1,5 @@
 import { IBank } from "../../../types/banks";
+import Loader from "../Loader/Loader";
 import { SelectStyle } from "./SelectStyle";
 
 export interface SelectProps {
@@ -7,11 +8,13 @@ export interface SelectProps {
   onClick?: (item: IBank) => void;
   selectedBank?: IBank;
   startIcon?: string;
+  loading: boolean;
 }
 export const Select = ({
   selectedBank,
   items,
   labelText,
+  loading,
   onClick,
   startIcon,
 }: SelectProps) => {
@@ -29,24 +32,30 @@ export const Select = ({
           src={startIcon}
         />
         <div className="select-box__current" tabIndex={1}>
-          {items.map((item, index) => (
-            <div key={index} className="select-box__value">
-              <input
-                className="select-box__input"
-                type="radio"
-                id={index.toString()}
-                value={++index}
-                onClick={() => onClick?.(item)}
-                name="Ben"
-                defaultChecked
-              />
-              <p className="select-box__input-text">
-                {selectedBank && Object.keys(selectedBank).length > 0
-                  ? selectedBank.name
-                  : "Please select your bank"}
-              </p>
+          {loading ? (
+            <div className="select-loading">
+              <Loader />
             </div>
-          ))}
+          ) : (
+            items.map((item, index) => (
+              <div key={index} className="select-box__value">
+                <input
+                  className="select-box__input"
+                  type="radio"
+                  id={index.toString()}
+                  value={++index}
+                  onClick={() => onClick?.(item)}
+                  name="Ben"
+                  defaultChecked
+                />
+                <p className="select-box__input-text">
+                  {selectedBank && Object.keys(selectedBank).length > 0
+                    ? selectedBank.name
+                    : "Please select your bank"}
+                </p>
+              </div>
+            ))
+          )}
 
           <img
             className="select-box__icon"

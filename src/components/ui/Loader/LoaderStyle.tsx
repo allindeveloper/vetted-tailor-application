@@ -4,8 +4,8 @@ import { myTheme } from "styles/theme";
 export const LoaderStyle = styled.svg`
   animation: rotate 2s linear infinite;
   margin: -25px 0 0 -25px;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 
   & .path {
     stroke: #5652bf;

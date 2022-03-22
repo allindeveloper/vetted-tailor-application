@@ -17,7 +17,7 @@ export const CardStyle = styled.div`
     font-size: 16px;
     color: ${(props) => props.theme.pallete.primary.black};
   }
-  img {
+  & .cardImage {
     text-align: center;
     margin-left: auto;
     margin-right: auto;

@@ -17,7 +17,7 @@ export interface IhandleSubmitProps {
 const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
   const [accountNumberKeyword, setaccountNumberKeyword] = useState<string>();
   const [accountNumberDataKeyword] = useDebounce(accountNumberKeyword, 700);
-  const { fetchBanks, allBanks } = useGetBanks();
+  const { fetchBanks, allBanks, listMetaData } = useGetBanks();
   const [selectedBank, setselectedBank] = useState<IBank>();
   const [error, seterror] = useState("");
   const { resolveAccount, resolvedResponse, resolvingMetaData } =
@@ -78,6 +78,7 @@ const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
           labelText="Bank Name"
           items={allBanks}
           startIcon={bankicon}
+          loading={listMetaData.isSearching}
           selectedBank={selectedBank}
         />
 

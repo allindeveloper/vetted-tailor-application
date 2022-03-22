@@ -19,12 +19,18 @@ label {
   border-radius: 7px;
   border: ${(props) => `0.7px solid${props.theme.pallete.common.greyFour}`};
 }
+& .select-loading {
+  margin-left: 70px;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
 & .selectstartIcon {
   position: absolute;
   left: 15px;
-  top: -4px;
+  top: 13px;
   cursor: pointer;
   width: 3.5%;
+
   @media ${device.mobileS} {
     width: auto;
   }
@@ -33,6 +39,7 @@ label {
   position: relative;
   cursor: pointer;
   outline: none;
+  display: flex;
 }
 & .select-box__current:focus + .select-box__list {
   opacity: 1;
@@ -47,12 +54,14 @@ label {
           transform: translateY(-50%) rotate(180deg);
 }
 & .select-box__icon {
-  position: absolute;
-  top: 19%;
+  top: -40%;
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 16px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: 20px;
   opacity: 0.3;
   transition: 0.2s ease;
 }
