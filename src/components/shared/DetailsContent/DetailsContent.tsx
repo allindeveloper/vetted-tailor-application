@@ -2,6 +2,7 @@ import emailicon from "assets/svg/emailicon.svg";
 import phoneicon from "assets/svg/phoneicon.svg";
 import React from "react";
 import { Button } from "../../ui/Button/Button";
+import { Space } from "../../ui/Space/Space";
 import { DetailsContentStyle } from "./DetailsContentStyle";
 
 export interface IDetailsContentProps {
@@ -60,6 +61,13 @@ const DetailsContent = ({ handleApply }: IDetailsContentProps) => {
           onClick={handleApply}
           title="Apply to be a Vetted Tailor"
           id={"tailorapply"}
+        />
+
+        <Space top={40} />
+        <Button
+          title="Application Pending"
+          type="default"
+          id={"applicationPending"}
         />
       </div>
     </DetailsContentStyle>
