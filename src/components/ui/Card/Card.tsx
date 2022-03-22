@@ -16,7 +16,9 @@ export const Card = ({
   return (
     <CardStyle data-testid="card">
       <p className="title">{title}</p>
-      {showImage && <img src={pexelsphoto} alt="Profile Picture" />}
+      {showImage && (
+        <img data-testid="card-image" src={pexelsphoto} alt="Profile Picture" />
+      )}
       {customTopContent && customTopContent}
 
       {customContent && customContent}
