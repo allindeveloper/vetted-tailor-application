@@ -6,6 +6,7 @@ export interface ICustomInputProps {
   placeholder?: string;
   value?: string;
   startIcon?: string;
+  type?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export const CustomInput = ({
@@ -15,6 +16,7 @@ export const CustomInput = ({
   id,
   placeholder = "Search",
   labelText,
+  type,
 }: ICustomInputProps) => {
   return (
     <InputStyle>
@@ -24,7 +26,7 @@ export const CustomInput = ({
       <div>
         <img alt="search" title="Search" src={startIcon} />
         <input
-          type="text"
+          type={type}
           onChange={(e) => onChange?.(e)}
           id={id}
           name={name}

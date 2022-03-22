@@ -17,7 +17,8 @@ const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
   const [accountNumberDataKeyword] = useDebounce(accountNumberKeyword, 700);
   const { fetchBanks, allBanks } = useGetBanks();
   const [selectedBank, setselectedBank] = useState<IBank>();
-  const { resolveAccount } = useResolveAccount();
+  const { resolveAccount, resolvedResponse, resolvingMetaData } =
+    useResolveAccount();
   useEffect(() => {
     fetchBanks();
   }, []);
@@ -64,10 +65,27 @@ const BankForm = ({ handleSubmit }: IhandleSubmitProps) => {
           id={"accountNumber"}
           labelText="Account Number"
           value={accountNumberKeyword}
+          type="number"
           onChange={handleSearchInputChange}
         />
       </div>
+      {resolvingMetaData.isSearching && !resolvingMetaData.isError && (
+        <div className="retrieving">
+          <label>Retrieving info...</label>
+        </div>
+      )}
 
+      {!resolvingMetaData.isSearching && !resolvingMetaData.isError && (
+        <div className="success">
+          <label>{resolvedResponse?.account_name}</label>
+        </div>
+      )}
+
+      {!resolvingMetaData.isSearching && resolvingMetaData.isError && (
+        <div>
+          <label className="error">{resolvingMetaData.errorMessage}</label>
+        </div>
+      )}
       <Space top={40} />
       <div className="submitDiv">
         <Button

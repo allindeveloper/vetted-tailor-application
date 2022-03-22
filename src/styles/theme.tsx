@@ -18,6 +18,9 @@ const myTheme: DefaultTheme = {
       lightmain: "#F9F9F9",
       heading: "#3F434A",
       black: "#212135",
+      error: "#f44336",
+      success: "#4caf50",
+      pending: "#ffc107",
     },
   },
 };

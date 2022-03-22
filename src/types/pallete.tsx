@@ -3,4 +3,7 @@ export interface IPalette {
   black: string;
   lightmain: string;
   heading: string;
+  error: string;
+  success: string;
+  pending: string;
 }
