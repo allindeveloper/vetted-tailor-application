@@ -1,4 +1,4 @@
-import PageContainer from "components/container/PageContainer/PageContainer";
+import MobileWrapper from "components/container/MobileWrapper/MobileWrapper";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import BankForm from "../../components/shared/BankForm/BankForm";
@@ -13,7 +13,7 @@ const ProfileDetails = () => {
     navigate(`/success`);
   };
   return (
-    <PageContainer title="Vetted Tailor Application">
+    <MobileWrapper title="Vetted Tailor Application">
       <Card
         title={"Vetted Tailor Application"}
         customTopContent={<UserDetails />}
@@ -23,7 +23,7 @@ const ProfileDetails = () => {
         showImage={false}
         customContent={<BankForm handleSubmit={submitApplication} />}
       />
-    </PageContainer>
+    </MobileWrapper>
   );
 };
 export default ProfileDetails;

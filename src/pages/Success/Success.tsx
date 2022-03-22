@@ -1,5 +1,5 @@
 import successicon from "assets/svg/successicon.svg";
-import PageContainer from "components/container/PageContainer/PageContainer";
+import MobileWrapper from "components/container/MobileWrapper/MobileWrapper";
 import { Card } from "components/ui/Card/Card";
 import React from "react";
 import { Button } from "../../components/ui/Button/Button";
@@ -7,7 +7,7 @@ import { Space } from "../../components/ui/Space/Space";
 import { SuccessStyle } from "./SuccessStyle";
 const Success = () => {
   return (
-    <PageContainer title="Application Successful">
+    <MobileWrapper title="Application Successful">
       <Card
         showImage={false}
         customContent={
@@ -24,7 +24,7 @@ const Success = () => {
           </SuccessStyle>
         }
       />
-    </PageContainer>
+    </MobileWrapper>
   );
 };
 export default Success;

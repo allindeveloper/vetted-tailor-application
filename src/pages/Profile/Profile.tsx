@@ -1,10 +1,10 @@
-import PageContainer from "components/container/PageContainer/PageContainer";
+import MobileWrapper from "components/container/MobileWrapper/MobileWrapper";
 import DetailsContent from "components/shared/DetailsContent/DetailsContent";
+import { Card } from "components/ui/Card/Card";
+import { Space } from "components/ui/Space/Space";
+import { Tabs } from "components/ui/Tabs/Tabs";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Card } from "../../components/ui/Card/Card";
-import { Space } from "../../components/ui/Space/Space";
-import { Tabs } from "../../components/ui/Tabs/Tabs";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const Profile = () => {
     navigate(`/view/${id}`);
   };
   return (
-    <PageContainer title="Profile">
+    <MobileWrapper showBackButton={false} title="Profile">
       <Card customTopContent={<DetailsContent handleApply={handleApply} />} />
       <Space top={20} />
       <Card
@@ -40,7 +40,7 @@ const Profile = () => {
           />
         }
       />
-    </PageContainer>
+    </MobileWrapper>
   );
 };
 export default Profile;

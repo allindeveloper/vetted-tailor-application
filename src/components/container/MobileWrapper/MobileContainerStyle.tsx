@@ -2,14 +2,15 @@ import styled from "styled-components";
 import { appPadding } from "../../../constants/appConstants";
 import { device } from "../../../styles/mediaQuery";
 
-export const PageContainerStyle = styled.div`
+export const MobileContainerStyle = styled.div`
   @media ${device.laptop} {
-    max-width: 600px;
+    display: none;
   }
 
   @media ${device.desktop} {
     max-width: 1400px;
     margin: 0 auto;
+    display: none;
   }
   @media ${device.mobileS} {
     margin: ${appPadding};
@@ -18,6 +19,7 @@ export const PageContainerStyle = styled.div`
   margin: 0 auto;
   flex-grow: 1;
   min-height: 100vh;
+  margin: ${appPadding};
   h2 {
     font-size: 22px;
   }

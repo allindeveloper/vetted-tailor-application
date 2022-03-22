@@ -8,12 +8,14 @@ import { HeaderStyle } from "./HeaderStyle";
 export interface IHeaderProps {
   title: string;
   handleGoBack?: () => void;
+  showBackButton?: boolean;
   handleClickHamburger?: () => void;
 }
 export const Header = ({
   title,
   handleGoBack,
   handleClickHamburger,
+  showBackButton = true,
 }: IHeaderProps) => {
   const navigate = useNavigate();
 
@@ -23,12 +25,16 @@ export const Header = ({
   return (
     <React.Fragment>
       <HeaderStyle data-testid="header">
-        <div
-          onClick={handleGoBack ? handleGoBack : goBack}
-          className="leftItem"
-        >
-          <img src={backicon} alt="back" />
-        </div>
+        {showBackButton ? (
+          <div
+            onClick={handleGoBack ? handleGoBack : goBack}
+            className="leftItem"
+          >
+            <img src={backicon} alt="back" />
+          </div>
+        ) : (
+          <div></div>
+        )}
         <div className="title">
           <label>{title}</label>
         </div>
