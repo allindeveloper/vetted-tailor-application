@@ -1,4 +1,4 @@
-Vetter Tailor application
+Vetted Tailor application
 ============================
 
 
