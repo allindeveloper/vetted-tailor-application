@@ -16,6 +16,7 @@ label {
   font-size: 18px;
   color: #60666d;
   z-index: 999;
+  height: 47px;
   border-radius: 7px;
   border: ${(props) => `0.7px solid${props.theme.pallete.common.greyFour}`};
 }
@@ -80,7 +81,7 @@ label {
   font-size: 15px;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 38px;
+  padding-left: 40px;
   padding-right: 22px;
  }
 & .select-box__list {
