@@ -19,7 +19,7 @@ export const Select = ({
   startIcon,
 }: SelectProps) => {
   return (
-    <SelectStyle>
+    <SelectStyle data-testid="select">
       <p>
         <label>{labelText}</label>
       </p>
@@ -33,12 +33,16 @@ export const Select = ({
         />
         <div className="select-box__current" tabIndex={1}>
           {loading ? (
-            <div className="select-loading">
+            <div data-testid="select-loader" className="select-loading">
               <Loader />
             </div>
           ) : (
             items.map((item, index) => (
-              <div key={index} className="select-box__value">
+              <div
+                key={index}
+                data-testid="bank-item"
+                className="select-box__value"
+              >
                 <input
                   className="select-box__input"
                   type="radio"
