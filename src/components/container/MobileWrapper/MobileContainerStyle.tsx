@@ -13,7 +13,10 @@ export const MobileContainerStyle = styled.div`
     display: none;
   }
   @media ${device.mobileS} {
-    margin: ${appPadding};
+    margin-left: ${appPadding};
+    margin-right: ${appPadding};
+    margin-bottom: ${appPadding};
+    margin-top: 100px;
   }
 
   margin: 0 auto;

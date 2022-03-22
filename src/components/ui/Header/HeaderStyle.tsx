@@ -25,14 +25,18 @@ export const HeaderStyle = styled.div`
     font-weight: 400;
     font-size: 16px;
   }
+  & .leftItemEmpty {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
   & .leftItem {
-    margin-left: 5px;
+    margin-left: 9px;
     padding-top: 4px;
     padding-bottom: 4px;
   }
   & .rightItem {
-    margin-right: 5px;
-    padding-top: 4px;
+    margin-right: 9px;
+    padding-top: 5px;
     padding-bottom: 4px;
   }
 `;

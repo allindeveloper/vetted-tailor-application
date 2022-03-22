@@ -53,12 +53,15 @@ export const DetailsContentStyle = styled.div`
     align-items: center;
     p {
       font-size: 12px;
+      color: ${(props) => props.theme.pallete.common.gray};
     }
     img {
       margin-top: 0;
     }
     & .bottom-text {
       margin-left: 14px;
+      font-weight: 700;
+      color: ${(props) => props.theme.pallete.common.greyThree};
     }
     & .bottom-value {
       margin-left: 14px;
@@ -72,12 +75,15 @@ export const DetailsContentStyle = styled.div`
     margin-top: 4px;
     p {
       font-size: 12px;
+      color: ${(props) => props.theme.pallete.common.gray};
     }
     img {
       margin-top: 0;
     }
     & .bottom-text {
       margin-left: 14px;
+      font-weight: 700;
+      color: ${(props) => props.theme.pallete.common.greyThree};
     }
     & .bottom-value {
       margin-left: 14px;

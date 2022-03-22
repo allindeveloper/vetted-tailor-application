@@ -33,7 +33,7 @@ export const Header = ({
             <img src={backicon} alt="back" />
           </div>
         ) : (
-          <div></div>
+          <div className="leftItemEmpty"></div>
         )}
         <div className="title">
           <label>{title}</label>
@@ -42,7 +42,7 @@ export const Header = ({
           <img src={hamburgericon} alt="hamburger" />
         </div>
       </HeaderStyle>
-      <Space bottom={100} />
+      <Space bottom={0} />
     </React.Fragment>
   );
 };

@@ -14,10 +14,12 @@ export const TabsStyle = styled.div`
     }
     & .selected {
       height: 4px;
+      margin-top: 14px;
       background-color: ${(props) => props.theme.pallete.primary.main};
     }
     & .notselected {
       height: 4px;
+      margin-top: 14px;
       background-color: ${(props) => props.theme.pallete.common.white};
     }
   }
